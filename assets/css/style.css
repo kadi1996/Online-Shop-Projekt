@@ -1,0 +1,91 @@
+/* 
+##################################
+        GENERAL
+##################################
+*/
+
+/* Farbe: #323A45 / #848484 */
+
+/* fonts: font-family: 'Karla', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* 
+##################################
+        HEADER
+##################################
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+##################################
+        MAIN
+##################################
+*/
+
+main section div img {
+    width: 50%;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 200px 200px;
+}
+
+.box01 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 5;
+}
+
+.box2 {
+    grid-column: 2/ 3;
+    grid-row: 1 / 2;
+}
+
+.box3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+
+
+/* 
+##################################
+        FOOTER
+##################################
+*/
