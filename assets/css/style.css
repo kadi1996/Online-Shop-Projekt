@@ -33,22 +33,32 @@ body {
 ##################################
 */
 
+header nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 5vh 20% 0 20%;
+}
 
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
 
+header nav ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    padding-left: 55px;
+    color: #323A45;
+}
 
+header nav ul li a:hover {
+    color: #848484;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+header nav h1:hover {
+    color: #848484;
+}
 
 
 /* 
@@ -57,24 +67,54 @@ body {
 ##################################
 */
 
+main {
+    margin: 5vh 12% 0 12%;
+}
+
+main article {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vh;
+}
+
 main section div img {
-    width: 50%;
+    width: 100%;
 }
 
 main section {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 200px 200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1.25fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+main section article h2,
+p {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+main section article h3 {
+    font-weight: 300;
+    color: #848484;
+    padding-top: 1.5vh;
+    font-size: 13px;
 }
 
 .box01 {
-    grid-column: 2 / 4;
-    grid-row: 1 / 5;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    margin-top: 5vh;
 }
 
 .box2 {
-    grid-column: 2/ 3;
-    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 .box3 {
@@ -82,10 +122,139 @@ main section {
     grid-row: 2 / 3;
 }
 
+.box4 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
 
+.box5 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.box6 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.box7 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.sectionFive {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1.25fr 1fr;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10vh;
+}
 
 /* 
 ##################################
         FOOTER
 ##################################
 */
+
+footer article {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 15% 0 3.5%;
+}
+
+footer ul li {
+    list-style: none;
+    line-height: 2;
+    font-size: 11px;
+}
+
+footer ul li:nth-of-type(1) {
+    padding-bottom: 5vh;
+    font-size: 1.25rem;
+}
+
+footer ul:nth-of-type(2) {
+    margin-left: 5%;
+}
+
+footer ul li span {
+    font-weight: 600;
+}
+
+footer p {
+    color: #848484;
+    font-size: 1rem;
+    margin: 3vh 0 3vh 12%;
+}
+
+/* ####################
+####  MEDIA QUERIES ####
+####################### */
+
+@media only screen and (max-width: 576px) {
+
+    /* 
+##################################
+        HEADER
+##################################
+*/
+
+    header div span {
+        display: block;
+        width: 50px;
+        height: 5px;
+        margin: 4px 0 4px auto;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    header nav {
+        margin: 5vh 12%;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+
+    /* 
+##################################
+        MAIN
+##################################
+*/
+
+    main section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionFive {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 
+##################################
+        FOOTER
+##################################
+*/
+
+    footer article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer article ul {
+        margin-left: 5%;
+    }
+
+    footer ul li:nth-of-type(1) {
+        padding: 3vh 0 3vh 0;
+    }
+
+    footer p {
+        color: #848484;
+        font-size: 1rem;
+        margin: 3vh 0 3vh 5%;
+    }
